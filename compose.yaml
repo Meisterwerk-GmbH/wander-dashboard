@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     image: dashboard:latest
     ports:
-      - "0:3000"
+      - "0:80"
     restart: unless-stopped
     networks:
       - default
