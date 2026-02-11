@@ -1,0 +1,12 @@
+name: dashboard
+
+services:
+  app:
+    container_name: dashboard-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dashboard:latest
+    ports:
+      - "${APP_PORT:-8080}:80"
+    restart: unless-stopped
