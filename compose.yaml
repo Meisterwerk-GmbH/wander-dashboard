@@ -8,5 +8,17 @@ services:
       dockerfile: Dockerfile
     image: dashboard:latest
     ports:
-      - "${APP_PORT:-8080}:80"
+      - "0:3000"
     restart: unless-stopped
+    networks:
+      - default
+      - proxy
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.wander-dashboard.rule=Host(`${DASHBOARD_HOST:-wander.ch}`)'
+      - 'traefik.http.routers.wander-dashboard.tls=true'
+      - 'traefik.http.routers.wander-dashboard.tls.certresolver=letsencrypt'
+
+networks:
+  proxy:
+    external: true

@@ -1,21 +1,23 @@
 COMPOSE ?= docker compose
+ENV_FILES := $(if $(wildcard .env),--env-file .env,)$(if $(wildcard .env.local), --env-file .env.local,)
+COMPOSE_CMD := $(COMPOSE) $(ENV_FILES)
 
-.PHONY: start stop restart update logs status
+.PHONY: up down start stop restart update logs status
 
 up:
-	$(COMPOSE) up -d --build
+	$(COMPOSE_CMD) up -d --build
 
 down:
-	$(COMPOSE) down
+	$(COMPOSE_CMD) down
 
-restart: stop start
+restart: down up
 
 update:
-	$(COMPOSE) build --pull --no-cache
-	$(COMPOSE) up -d --force-recreate
+	$(COMPOSE_CMD) build --pull --no-cache
+	$(COMPOSE_CMD) up -d --force-recreate
 
 logs:
-	$(COMPOSE) logs -f --tail=200
+	$(COMPOSE_CMD) logs -f --tail=200
 
 status:
-	$(COMPOSE) ps
+	$(COMPOSE_CMD) ps
