@@ -240,8 +240,7 @@ export default function App() {
             <div className="space-y-3">
               <h2 className="text-3xl font-semibold text-slate-50">Easy Miete. Easy Lieferung.</h2>
               <p className="text-sm text-slate-100">
-                Flexible Retailflächen, die sich an Business und Community anpassen. Pop-ups,
-                Showrooms und Räume mit Charakter.
+                mieten statt kaufen, bei rentshop findest du alles für deinen Event. Das Material wird per Post zu dir nach Hause geliefert.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 text-xs text-slate-200">
