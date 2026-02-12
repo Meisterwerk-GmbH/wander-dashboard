@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import repoQrImage from "./assets/repoqr.png";
+import DogToggle from "./components/DogToggle";
 
 type AarePayload = Record<string, unknown>;
 
@@ -251,6 +252,8 @@ export default function App() {
           </div>
         </section>
       </main>
+
+      <DogToggle />
 
       <footer className="fixed right-0 bottom-4 left-0 z-20 px-4 text-xs text-slate-400 sm:px-8 lg:px-16">
         <div className="flex items-end justify-between gap-4">
