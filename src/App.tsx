@@ -3,6 +3,7 @@ import repoQrImage from "./assets/repoqr.png";
 import AcceleritCard from "./components/card/Accelerit";
 import DogToggle from "./components/DogToggle";
 import RentshopCard from "./components/card/Rentshop";
+import PublicTransportCard from "./components/card/PublicTransport";
 import RiverTemperatureCard from "./components/card/RiverTemparature";
 
 const DASHBOARD_REPO_URL = "https://github.com/Meisterwerk-GmbH/wander-dashboard";
@@ -53,10 +54,11 @@ export default function App() {
         </div>
       </header>
 
-      <main className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_1fr_1.1fr]">
+      <main className="mt-10 grid gap-8 lg:grid-cols-2 xl:grid-cols-4">
         <AcceleritCard />
         <RiverTemperatureCard />
         <RentshopCard />
+        <PublicTransportCard />
       </main>
 
       <DogToggle />
