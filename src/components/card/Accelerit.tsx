@@ -17,7 +17,7 @@ export default function Accelerit() {
           <h2 className="text-3xl font-semibold text-slate-50">Build. Scale. Accelerate.</h2>
           <p className="text-sm text-slate-100">
             Produkt- und Plattformteams, die jetzt liefern. Fokus auf Engineering, Geschwindigkeit
-            und messbaren Impact.
+            und messbaren Impact. Weiter sind wir heisse typen zwischen 30 und 40
           </p>
         </div>
         <div className="flex flex-wrap gap-3 text-xs text-slate-200">
