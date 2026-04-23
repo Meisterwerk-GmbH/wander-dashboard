@@ -5,6 +5,7 @@ services:
       - proxy
     labels:
       - 'traefik.enable=true'
+      - 'traefik.docker.network=proxy'
       - 'traefik.http.routers.wander-dashboard.rule=Host(`${DASHBOARD_HOST:-wander.ch}`)'
       - 'traefik.http.routers.wander-dashboard.tls=true'
       - 'traefik.http.routers.wander-dashboard.tls.certresolver=letsencrypt'
