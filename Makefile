@@ -27,7 +27,7 @@ restart: down up
 
 update:
 	$(DC) build --pull --no-cache
-	$(DC) up -d --force-recreate
+	$(DC) up -d --force-recreate --wait
 
 logs:
 	$(DC) logs -f --tail=200
